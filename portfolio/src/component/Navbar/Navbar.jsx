@@ -77,7 +77,7 @@ const Navbar = () => {
       {/* Navigation Menu */}
       <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
         <li><a href="#Home" onClick={handleLinkClick}>Home</a></li>
-        <li><a href="#About" onClick={handleLinkClick}>About Me</a></li>
+        <li><a href="#About" onClick={handleLinkClick}>About </a></li>
         <li><a href="#Services" onClick={handleLinkClick}>Services</a></li>
         <li><a href="#Project" onClick={handleLinkClick}>Project</a></li>
         <li><a href="#Contact" onClick={handleLinkClick}>Contact</a></li>
