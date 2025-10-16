@@ -1,0 +1,165 @@
+.services {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 80px;
+  min-height: 100vh;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* ---------- Title Section ---------- */
+.services-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.services-title h1 {
+  font-size: 80px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #a020f0, #ff8c00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.services-title img {
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* ---------- Service Cards Grid ---------- */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-content: center;
+}
+
+/* ---------- Individual Service Card ---------- */
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.3s ease;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(160, 32, 240, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.4);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.service-card h2 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  background: linear-gradient(90deg, #a020f0, #ff8c00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- Responsiveness ---------- */
+
+/* For large tablets and small laptops */
+@media (max-width: 992px) {
+  .services {
+    padding: 80px 50px;
+  }
+
+  .services-title h1 {
+    font-size: 60px;
+  }
+
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .service-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* For tablets and large phones */
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 30px;
+  }
+
+  .services-title h1 {
+    font-size: 50px;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+
+  .service-card img {
+    height: 180px;
+  }
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+  .services {
+    padding: 40px 20px;
+  }
+
+  .services-title h1 {
+    font-size: 36px;
+  }
+
+  .services-title img {
+    width: 120px;
+    margin-left: 0;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+}

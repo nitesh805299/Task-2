@@ -1,0 +1,187 @@
+.project {
+  background: #121212;
+  padding: 100px 80px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* ---------- Title Section ---------- */
+.project-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.project-title h1 {
+  font-size: 80px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #a020f0, #ff8c00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.project-title img {
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* ---------- Project Cards Layout ---------- */
+.projectCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px;
+  justify-content: center;
+}
+
+/* ---------- Individual Project Card ---------- */
+.projectCard div {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projectCard div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.4);
+}
+
+.projectCard div h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #a020f0, #ff8c00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projectCard div p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.projectCard div p span {
+  font-weight: bold;
+  color: #f9b233;
+}
+
+.projectCard div a {
+  text-decoration: none;
+  background: #6a0dad;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.projectCard div a:hover {
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 10.06%);
+  color: #121212;
+}
+
+/* ---------- RESPONSIVENESS ---------- */
+
+/* Large tablets / small laptops */
+@media (max-width: 992px) {
+  .project {
+    padding: 80px 50px;
+  }
+
+  .project-title h1 {
+    font-size: 60px;
+  }
+
+  .projectCard {
+    grid-template-columns: repeat(2, 1fr); /* ✅ Still 2 columns */
+    gap: 30px;
+  }
+
+  .projectCard div {
+    padding: 25px;
+  }
+
+  .projectCard div h2 {
+    font-size: 1.4rem;
+  }
+
+  .projectCard div p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets and large phones */
+@media (max-width: 768px) {
+  .project {
+    padding: 60px 30px;
+  }
+
+  .project-title h1 {
+    font-size: 50px;
+  }
+
+  .project-title img {
+    width: 150px;
+  }
+
+  .projectCard {
+    grid-template-columns: 1fr; /* ✅ Single column on mobile */
+    gap: 25px;
+  }
+
+  .projectCard div {
+    padding: 25px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .project {
+    padding: 40px 20px;
+  }
+
+  .project-title h1 {
+    font-size: 36px;
+  }
+
+  .project-title img {
+    width: 120px;
+    margin-left: 0;
+  }
+
+  .projectCard div {
+    padding: 20px;
+  }
+
+  .projectCard div h2 {
+    font-size: 1.2rem;
+  }
+
+  .projectCard div p {
+    font-size: 0.9rem;
+  }
+
+  .projectCard div a {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
